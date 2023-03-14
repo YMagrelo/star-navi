@@ -1,0 +1,17 @@
+.hoverSquares {
+  margin-left: 40px;
+
+  &_title {
+    margin: 0 0 20px;
+  }
+
+  &_line {
+    color: #896d3a;
+    font-weight: bold;
+    padding: 10px 5px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    background-color: #fcf8e3;
+    border: 2px solid #fbefd3;
+  }
+}

@@ -1,0 +1,35 @@
+.modePicker {
+  display: flex;
+  margin-bottom: 20px;
+
+  &_select {
+    width: 100%;
+    height: 30px;
+    font-weight: bold;
+    min-width: 120px;
+    margin-right: 10px;
+  }
+
+  &_button {
+    color: #fff;
+    border: none;
+    min-width: 65px;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 4px;
+    font-weight: bolder;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background-color: dodgerblue;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: mediumblue;
+    }
+
+    &-disabled {
+      background-color: gray;
+      pointer-events: none;
+    }
+  }
+}
