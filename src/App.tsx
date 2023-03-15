@@ -1,12 +1,10 @@
-import React, { ChangeEvent, useState, useEffect } from 'react'
+import React, { ChangeEvent, useState, MouseEvent } from 'react'
 import ModePicker from './components/modePicker/ModePicker'
 import PlayField from './components/playField/PlayField'
 import HoverList from './components/hoverList/HoverList'
 import './app.scss'
 import { ModeType } from './types'
 import useModes from './hooks/modes'
-
-const hoverSquaresList: Array<string> = ['row 2 col 1', 'row 2 col 2', 'row 2 col 3', 'row 3 col 3']
 
 function App() {
   const [currentMode, setCurrentMode] = useState<ModeType | undefined>({} as ModeType)
@@ -21,8 +19,9 @@ function App() {
     setCurrentMode(newCurrentMode)
   }
 
-  const squareHoverHandler = (event: any) => {
-    const hoveredSquareId = event.target.id
+  const squareHoverHandler = (event: MouseEvent) => {
+    const target = event.target as HTMLDivElement
+    const hoveredSquareId = target.id
 
     if (isGameActive && hoveredSquareId && !hoveredSquares.includes(hoveredSquareId)) {
       setHoveredSquares((prev) => [...prev, hoveredSquareId])
