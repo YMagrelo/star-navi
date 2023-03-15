@@ -40,22 +40,25 @@ function App() {
 
   return (
     <div className='app'>
-      <div>
-        <MemorizedModePicker
-          currentMode={currentMode}
-          changeModeHandler={changeModeHandlerCallback}
-          modes={modes}
-          activeGameHandler={activeGameHandlerCallBack}
-          isGameActive={isGameActive}
-        />
-        <PlayField
-          currentMode={currentMode}
-          isGameActive={isGameActive}
-          squareHoverHandler={squareHoverHandler}
-          hoveredSquares={hoveredSquares}
-        />
+      <h3 className='app_header'>Pick mode and press START to begin the game</h3>
+      <div className='app_body'>
+        <div>
+          <MemorizedModePicker
+            currentMode={currentMode}
+            changeModeHandler={changeModeHandlerCallback}
+            modes={modes}
+            activeGameHandler={activeGameHandlerCallBack}
+            isGameActive={isGameActive}
+          />
+          <PlayField
+            currentMode={currentMode}
+            isGameActive={isGameActive}
+            squareHoverHandler={squareHoverHandler}
+            hoveredSquares={hoveredSquares}
+          />
+        </div>
+        <MemorizedHoverList hoveredSquares={hoveredSquares} />
       </div>
-      <MemorizedHoverList hoveredSquares={hoveredSquares} />
     </div>
   )
 }
