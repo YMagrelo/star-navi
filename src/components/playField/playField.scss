@@ -1,5 +1,6 @@
 .playField, .playField-active {
   display: flex;
+  pointer-events: none;
   flex-direction: column;
   border: 1px solid gray;
 
@@ -18,6 +19,7 @@
 }
 
 .playField-active {
+  pointer-events: auto;
   border: 1px solid #000;
 
   &_block {
