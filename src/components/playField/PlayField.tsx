@@ -10,12 +10,9 @@ type PlayFieldPropsType = {
   hoveredSquares: string[]
 }
 
-const PlayField = ({
-  currentMode,
-  isGameActive,
-  squareHoverHandler,
-  hoveredSquares,
-}: PlayFieldPropsType) => {
+const PlayField = (props: PlayFieldPropsType) => {
+  const { currentMode, isGameActive, squareHoverHandler, hoveredSquares } = props
+
   const rowsNumber = !currentMode?.field ? DEFAULT_ROWS_NUMBER : currentMode.field
   const rowsNumberList = Array.from({ length: rowsNumber }, (_: number, i: number) => i + 1)
 

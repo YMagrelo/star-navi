@@ -14,10 +14,12 @@ type ModePickerPropsType = {
 const ModePicker = (props: ModePickerPropsType) => {
   const { currentMode, changeModeHandler, modes, activeGameHandler, isGameActive } = props
   const { isLoading } = useModes()
+
   const isStartGameEnabled = Boolean(!isLoading && currentMode?.field)
   const buttonClassName = isStartGameEnabled
     ? 'modePicker_button'
     : 'modePicker_button modePicker_button-disabled'
+
   return (
     <div className='modePicker'>
       <select
@@ -46,4 +48,4 @@ const ModePicker = (props: ModePickerPropsType) => {
   )
 }
 
-export default ModePicker
+export const MemorizedModePicker = React.memo(ModePicker)

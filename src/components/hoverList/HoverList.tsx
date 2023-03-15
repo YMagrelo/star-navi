@@ -1,4 +1,5 @@
 import './howerList.scss'
+import React from 'react'
 
 type HoveredSquaresPropsType = {
   hoveredSquares: string[]
@@ -19,4 +20,4 @@ const HoverList = ({ hoveredSquares }: HoveredSquaresPropsType) => {
   )
 }
 
-export default HoverList
+export const MemorizedHoverList = React.memo(HoverList)
