@@ -3,7 +3,11 @@ body {
   font-family: open-sans, Arial;
 }
 .app {
-  padding: 30px;
+  padding: 25px;
+
+  &_header {
+    margin-top: 0;
+  }
 
   &_body {
     display: flex;
