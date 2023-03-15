@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className='app'>
-      <h3 className='app_header'>Pick mode and press START to begin the game</h3>
+      <h4 className='app_header'>Pick mode and press START to begin the game</h4>
       <div className='app_body'>
         <div>
           <MemorizedModePicker
